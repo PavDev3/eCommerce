@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/productsListFragment">
+
+    <fragment
+        android:id="@+id/productsListFragment"
+        android:name="dev.pablo.recyclerview.presentation.product_list.ProductListFragment"
+        android:label="Inicio"
+        tools:layout="@layout/layout_product_item">
+        <action
+            android:id="@+id/action_productsListFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="dev.pablo.recyclerview.presentation.favorites.FavoritesFragment"
+        android:label="Favoritos"
+        tools:layout="@layout/fragment_favorites">
+        <action
+            android:id="@+id/action_favoritesFragment_to_shoppingCartFragment"
+            app:destination="@id/shoppingCartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoppingCartFragment"
+        android:name="dev.pablo.recyclerview.presentation.shopping_cart.ShoppingCartFragment"
+        android:label="Cesta"
+        tools:layout="@layout/fragment_shopping_cart">
+        <action
+            android:id="@+id/action_shoppingCartFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="dev.pablo.recyclerview.presentation.shopping_cart.PaymentFragment"
+        android:label="PaymentFragment" >
+        <action
+            android:id="@+id/action_paymentFragment_to_succesPaymentDialog2"
+            app:destination="@id/succesPaymentDialog" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="dev.pablo.recyclerview.presentation.product_detail.ProductDetailFragment"
+        android:label="ProductDetailFragment" >
+        <action
+            android:id="@+id/action_productDetailFragment_to_shoppingCartFragment"
+            app:destination="@id/shoppingCartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/succesPaymentDialog"
+        android:name="dev.pablo.recyclerview.presentation.shopping_cart.SuccesPaymentDialog"
+        android:label="SuccesPaymentDialog" />
+</navigation>

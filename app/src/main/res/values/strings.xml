@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">eCommerce</string>
+    <string name="inicio">Inicio</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="cesta">Cesta</string>
+    <string name="favoritos_title">Favoritos</string>
+    <string name="a_adir_lista_a_la_cesta">Añadir lista a la cesta</string>
+    <string name="comprar">Comprar</string>
+</resources>
